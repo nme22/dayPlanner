@@ -2,11 +2,16 @@ console.log("my javascript hit")
 
 
 
-var time = moment().format("dddd, MMMM Do YYYY, h:mm a");
-$("#currentDay").text(time);
+var time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+$("#currentDay").text(time), -1000;
 
-// timeblock's color changes based on the time vs the time of the block.
-if ()
+function checkTime(){
+
+}
+
+
+// text area's background color changes based on the time vs the time of the block.
+
 // If the time block is in the past change the color to grey
 // If the time block is the current hour then change the color of the block to green
 // If the time block is in the future, change the color of the block to red
