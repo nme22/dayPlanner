@@ -5,5 +5,5 @@ var button = $('.saveBtn')
 $(document).ready(function () {
   var date = moment().format('dddd MMMM Do, hh:mm a');
 
-  $('#currentDay').text(date);
+ 
 });
