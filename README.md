@@ -4,4 +4,4 @@
 
 Additonally, Moment.js is used to provide a dynamic approach to updating the color of the timeblocks. The application uses a simple dynamic by showing the future(green), the present(red), and the past(grey). Local storage updates the timeblocks upon a reload.
 
-Deployed link:
+Deployed link: https://nme22.github.io/dayPlanner/
