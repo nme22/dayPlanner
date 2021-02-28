@@ -9,29 +9,28 @@ $(document).ready(function () {
 
 
   function currentTime() {
-    var current = moment().hours()
-    var time = $('.row');
-
-    //    console.log(current);
-
-    time.each(function () {
+    var currentHour = moment().hours()
+    var timeBlock = $('.row');
+// use .each to iterate over jquery arrays
+    timeBlock.each(function () {
+      // parseInt.attr will only parse number strings, so change id's to number values
       var hour = parseInt($(this).attr('id'))
 
-    //  console.log(hour);
+     console.log(hour);
 
     //Set styling so that business hours that have passed are greyed out;  if / else for time component 
     //Set styling so that the current time/hour is a red color;
     //Set styling so that hours that have not yet occured are in green 
 
-      if (hour === current) {
+      if (hour === currentHour) {
         $(this).children('.col-10').attr('class', 'present col-10 textInput')
-       console.log(('present' + hour + current))
-      } else if (current > hour) {
+       console.log(('present' + hour + currentHour))
+      } else if (currentHour > hour) {
         $(this).children('.col-10').attr('class', 'past col-10 textInput')
-       console.log(('past' + hour + current))
+       console.log(('past' + hour + currentHour))
       } else {
         $(this).children('.col-10').attr('class', 'future col-10 textInput')
-       console.log(('future' + hour + current))
+       console.log(('future' + hour + currentHour))
       }
     })
   }
@@ -47,15 +46,15 @@ $(document).ready(function () {
 
   })
 
-  $('#hour-9 textarea').val(localStorage.getItem('hour-9').replace(/['"]+/g, ''));
-  $('#hour-10 textarea').val(localStorage.getItem('hour-10').replace(/['"]+/g, ''));
-  $('#hour-11 textarea').val(localStorage.getItem('hour-11').replace(/['"]+/g, ''));
-  $('#hour-12 textarea').val(localStorage.getItem('hour-12').replace(/['"]+/g, ''));
-  $('#hour-13 textarea').val(localStorage.getItem('hour-13').replace(/['"]+/g, ''));
-  $('#hour-14 textarea').val(localStorage.getItem('hour-14').replace(/['"]+/g, ''));
-  $('#hour-15 textarea').val(localStorage.getItem('hour-15').replace(/['"]+/g, ''));
-  $('#hour-16 textarea').val(localStorage.getItem('hour-16').replace(/['"]+/g, ''));
-  $('#hour-17 textarea').val(localStorage.getItem('hour-17')).replace(/['"]+/g, '');
+  $('#9 textarea').val(localStorage.getItem('9').replace(/['"]+/g, ''));
+  $('#10 textarea').val(localStorage.getItem('10').replace(/['"]+/g, ''));
+  $('#11 textarea').val(localStorage.getItem('11').replace(/['"]+/g, ''));
+  $('#12 textarea').val(localStorage.getItem('12').replace(/['"]+/g, ''));
+  $('#13 textarea').val(localStorage.getItem('13').replace(/['"]+/g, ''));
+  $('#14 textarea').val(localStorage.getItem('14').replace(/['"]+/g, ''));
+  $('#15 textarea').val(localStorage.getItem('15').replace(/['"]+/g, ''));
+  $('#16 textarea').val(localStorage.getItem('16').replace(/['"]+/g, ''));
+  $('#17 textarea').val(localStorage.getItem('17')).replace(/['"]+/g, '');
 
   
 
