@@ -18,17 +18,17 @@ $(document).ready(function () {
 
      console.log(hour);
 
-    //Set styling so that business hours that have passed are greyed out;  if / else for time component 
+ 
     //Set styling so that the current time/hour is a red color;
-    //Set styling so that hours that have not yet occured are in green 
-
       if (hour === currentHour) {
         $(this).children('.col-10').attr('class', 'present col-10 textInput')
        console.log(('present' + hour + currentHour))
       } else if (currentHour > hour) {
+           //Set styling so that business hours that have passed are greyed out;
         $(this).children('.col-10').attr('class', 'past col-10 textInput')
        console.log(('past' + hour + currentHour))
       } else {
+        //Set styling so that hours that have not yet occured are in green 
         $(this).children('.col-10').attr('class', 'future col-10 textInput')
        console.log(('future' + hour + currentHour))
       }
